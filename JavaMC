@@ -1,0 +1,33 @@
+   import java.util.Scanner;
+
+
+public class practice1 {
+
+    public static void mortgageCalc(int p,double r,int n){
+        double x = r/(100*12);
+        double y = java.lang.Math.pow((1+x),n*12);
+
+        double M = p*x*y/(y-1);
+        System.out.println("Mortgage is : "+ M);
+    }
+
+
+    public static void main(String[] args) {
+
+       Scanner sc = new Scanner(System.in);
+        System.out.print("Principal: ");
+        int p = sc.nextInt();
+
+        System.out.print("rate (%) : ");
+        double r = sc.nextDouble();
+
+        System.out.print("Years :");
+        int n = sc.nextInt();
+
+        mortgageCalc(p,r,n);
+    }
+
+
+
+
+    }
